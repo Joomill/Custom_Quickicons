@@ -326,6 +326,17 @@ class CustomQuickIconHelper
                 $this->buttons[$key][] = $quickicon;
             }
 
+            if ($params->get('show_extensions')) {
+                $this->buttons[$key][] = [
+                    'image'   => 'icon-puzzle-piece',
+                    'link'    => Route::_('index.php?option=com_installer&view=manage'),
+                    'linkadd' => Route::_('index.php?option=com_installer&view=install'),
+                    'name'    => 'MOD_CUSTOM_QUICKICON_EXTENSIONS_MANAGER',
+                    'access'  => ['core.manage', 'com_installer', 'core.admin', 'com_installer'],
+                    'group'   => $context
+                ];
+            }
+
             if ($params->get('show_template_styles')) {
                 $this->buttons[$key][] = [
                     'image'  => 'icon-paint-brush',
