@@ -570,6 +570,71 @@ class CustomQuickIconHelper
 		        $this->buttons[$key][] = $tmp;
 	        }
 
+            // JoomGallery QUICKICONS
+            if ($params->get('galleries_component') == "JoomGallery") {
+                if ($params->get('show_joomgallery_control_panel')) {
+                    $this->buttons[$key][] = [
+                        'image'   => 'icon-home',
+                        'link'    => Route::_('index.php?option=com_joomgallery&view=control'),
+                        'name'    => 'MOD_CUSTOM_QUICKICON_SHOW_JOOMGALLERY_CONTROL_LABEL',
+                        'access'  => ['core.manage', 'com_joomgallery'],
+                        'group'   => $context,
+                    ];
+                }
+
+                if ($params->get('show_joomgallery_images')) {
+                    $this->buttons[$key][] = [
+                        'image'   => 'icon-images',
+                        'link'    => Route::_('index.php?option=com_joomgallery&view=images'),
+                        'name'    => 'MOD_CUSTOM_QUICKICON_SHOW_JOOMGALLERY_IMAGES_LABEL',
+                        'access'  => ['core.manage', 'com_joomgallery'],
+                        'group'   => $context,
+                    ];
+                }
+
+                if ($params->get('show_joomgallery_upload')) {
+                    $this->buttons[$key][] = [
+                        'image'   => 'icon-upload',
+                        'link'    => Route::_('index.php?option=com_joomgallery&view=image&layout=upload'),
+                        'name'    => 'MOD_CUSTOM_QUICKICON_SHOW_JOOMGALLERY_UPLOAD_LABEL',
+                        'access'  => ['core.manage', 'com_joomgallery'],
+                        'group'   => $context,
+                    ];
+                }
+
+                if ($params->get('show_joomgallery_categories')) {
+                    $this->buttons[$key][] = [
+                        'image'   => 'icon-folder-open',
+                        'link'    => Route::_('index.php?option=com_joomgallery&view=categories'),
+                        'linkadd' => Route::_('index.php?option=com_joomgallery&view=category&layout=edit'),
+                        'name'    => 'MOD_CUSTOM_QUICKICON_SHOW_JOOMGALLERY_CATEGORIES_LABEL',
+                        'access'  => ['core.manage', 'com_joomgallery'],
+                        'group'   => $context,
+                    ];
+                }
+
+                if ($params->get('show_joomgallery_configs')) {
+                    $this->buttons[$key][] = [
+                        'image'   => 'icon-sliders-h',
+                        'link'    => Route::_('index.php?option=com_joomgallery&view=configs'),
+                        'linkadd' => Route::_('index.php?option=com_joomgallery&view=config&layout=edit'),
+                        'name'    => 'MOD_CUSTOM_QUICKICON_SHOW_JOOMGALLERY_CONFIGSETS_LABEL',
+                        'access'  => ['core.manage', 'com_joomgallery'],
+                        'group'   => $context,
+                    ];
+                }
+
+                if ($params->get('show_joomgallery_tags')) {
+                    $this->buttons[$key][] = [
+                        'image'   => 'icon-tags',
+                        'link'    => Route::_('index.php?option=com_joomgallery&view=tags'),
+                        'linkadd' => Route::_('index.php?option=com_joomgallery&view=tag&layout=edit'),
+                        'name'    => 'MOD_CUSTOM_QUICKICON_SHOW_JOOMGALLERY_TAGS_LABEL',
+                        'access'  => ['core.manage', 'com_joomgallery'],
+                        'group'  => $context,
+                    ];
+                }
+            }
 
             // DJ-CATALOG QUICKICONS
             if ($params->get('ecommerce_component') == "DJ-Catalog") {

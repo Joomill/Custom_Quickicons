@@ -328,6 +328,87 @@
                 </field>
             </fieldset>
 
+            <fieldset name="galleries">
+                <field
+                        name="galleries_component"
+                        type="list"
+                        label="MOD_CUSTOM_QUICKICON_GALLERIES_COMPONENT_LABEL"
+                        default="JoomGallery"
+                >
+                    <option value="JoomGallery">MOD_CUSTOM_QUICKICON_JOOMGALLERY</option>
+                    <option value="Ignite Gallery">MOD_CUSTOM_QUICKICON_IGNITEGALLERY</option>
+                    <option value="Phoca Gallery">MOD_CUSTOM_QUICKICON_PHOCAGALLERY</option>
+                </field>
+
+                <field
+                        name="show_joomgallery_control_panel"
+                        type="radio"
+                        label="MOD_CUSTOM_QUICKICON_SHOW_JOOMGALLERY_CONTROL_LABEL"
+                        layout="joomla.form.field.radio.switcher"
+                        default="0"
+                        showon="galleries_component:JoomGallery"
+                >
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field
+                        name="show_joomgallery_images"
+                        type="radio"
+                        label="MOD_CUSTOM_QUICKICON_SHOW_JOOMGALLERY_IMAGES_LABEL"
+                        layout="joomla.form.field.radio.switcher"
+                        default="0"
+                        showon="galleries_component:JoomGallery"
+                >
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field
+                        name="show_joomgallery_upload"
+                        type="radio"
+                        label="MOD_CUSTOM_QUICKICON_SHOW_JOOMGALLERY_UPLOAD_LABEL"
+                        layout="joomla.form.field.radio.switcher"
+                        default="0"
+                        showon="galleries_component:JoomGallery"
+                >
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field
+                        name="show_joomgallery_categories"
+                        type="radio"
+                        label="MOD_CUSTOM_QUICKICON_SHOW_JOOMGALLERY_CATEGORIES_LABEL"
+                        layout="joomla.form.field.radio.switcher"
+                        default="0"
+                        showon="galleries_component:JoomGallery"
+                >
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+
+                <field
+                        name="show_joomgallery_configs"
+                        type="radio"
+                        label="MOD_CUSTOM_QUICKICON_SHOW_JOOMGALLERY_CONFIGSETS_LABEL"
+                        layout="joomla.form.field.radio.switcher"
+                        default="0"
+                        showon="galleries_component:JoomGallery"
+                >
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field
+                        name="show_joomgallery_tags"
+                        type="radio"
+                        label="MOD_CUSTOM_QUICKICON_SHOW_JOOMGALLERY_TAGS_LABEL"
+                        layout="joomla.form.field.radio.switcher"
+                        default="0"
+                        showon="galleries_component:JoomGallery"
+                >
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+            </fieldset>
+
             <fieldset name="ecommerce">
                 <field
                         name="ecommerce_component"
